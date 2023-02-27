@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Cordoba");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Dolar");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Efectivo", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Credito");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Venta", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Cordoba");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Dolar");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Efectivo", new System.Windows.Forms.TreeNode[] {
+            treeNode11,
+            treeNode12});
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Credito");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Venta", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtPago = new System.Windows.Forms.MaskedTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnPAgar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,18 +69,18 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 12);
             this.treeView1.Name = "treeView1";
-            treeNode6.Name = "Nodo3";
-            treeNode6.Text = "Cordoba";
-            treeNode7.Name = "Nodo4";
-            treeNode7.Text = "Dolar";
-            treeNode8.Name = "Nodo1";
-            treeNode8.Text = "Efectivo";
-            treeNode9.Name = "Nodo2";
-            treeNode9.Text = "Credito";
-            treeNode10.Name = "Nodo0";
-            treeNode10.Text = "Venta";
+            treeNode11.Name = "Nodo3";
+            treeNode11.Text = "Cordoba";
+            treeNode12.Name = "Nodo4";
+            treeNode12.Text = "Dolar";
+            treeNode13.Name = "Nodo1";
+            treeNode13.Text = "Efectivo";
+            treeNode14.Name = "Nodo2";
+            treeNode14.Text = "Credito";
+            treeNode15.Name = "Nodo0";
+            treeNode15.Text = "Venta";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode10});
+            treeNode15});
             this.treeView1.Size = new System.Drawing.Size(121, 383);
             this.treeView1.TabIndex = 0;
             // 
@@ -203,13 +204,13 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Vuelto";
             // 
-            // maskedTextBox3
+            // mtxtPago
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(287, 536);
-            this.maskedTextBox3.Mask = "000000000000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox3.TabIndex = 12;
+            this.mtxtPago.Location = new System.Drawing.Point(287, 536);
+            this.mtxtPago.Mask = "000000000000";
+            this.mtxtPago.Name = "mtxtPago";
+            this.mtxtPago.Size = new System.Drawing.Size(100, 23);
+            this.mtxtPago.TabIndex = 12;
             // 
             // textBox2
             // 
@@ -259,6 +260,7 @@
             this.btnPAgar.TabIndex = 18;
             this.btnPAgar.Text = "Pagar";
             this.btnPAgar.UseVisualStyleBackColor = true;
+            this.btnPAgar.Click += new System.EventHandler(this.btnPAgar_Click);
             // 
             // button4
             // 
@@ -269,11 +271,19 @@
             this.button4.Text = "Limpiar";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Location = new System.Drawing.Point(554, 188);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(100, 23);
+            this.txtSubtotal.TabIndex = 20;
+            // 
             // frmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 648);
+            this.Controls.Add(this.txtSubtotal);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnPAgar);
             this.Controls.Add(this.button2);
@@ -281,7 +291,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.mtxtPago);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -320,7 +330,7 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private MaskedTextBox maskedTextBox3;
+        private MaskedTextBox mtxtPago;
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
@@ -328,5 +338,6 @@
         private Button button2;
         private Button btnPAgar;
         private Button button4;
+        private TextBox txtSubtotal;
     }
 }
