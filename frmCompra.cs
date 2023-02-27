@@ -16,5 +16,33 @@ namespace ccvp1
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombre.Text;
+            double cantidad, precio, total, subtotal, monto, vuelto;
+
+            if(txtNombre.Text == "")
+            {
+                MessageBox.Show("Ingrese su nombre");
+                txtNombre.Focus();
+            }
+            else if (mtxtCantidad.Text == "")
+            {
+                MessageBox.Show("Ingrese la cantidad");
+                mtxtCantidad.Focus();
+            }
+            else if(mtxtPrecio.Text == "")
+            {
+                MessageBox.Show("Ingrese el precio");
+                mtxtCantidad.Focus();
+
+            }
+            else
+            {
+
+
+            }
+        }
     }
 }

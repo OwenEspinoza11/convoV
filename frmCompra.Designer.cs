@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Cordoba");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Dolar");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Efectivo", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Credito");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Venta", new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Cordoba");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Dolar");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Efectivo", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Credito");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Venta", new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode9});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCantidad = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPAgar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -68,18 +68,18 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 12);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Nodo3";
-            treeNode1.Text = "Cordoba";
-            treeNode2.Name = "Nodo4";
-            treeNode2.Text = "Dolar";
-            treeNode3.Name = "Nodo1";
-            treeNode3.Text = "Efectivo";
-            treeNode4.Name = "Nodo2";
-            treeNode4.Text = "Credito";
-            treeNode5.Name = "Nodo0";
-            treeNode5.Text = "Venta";
+            treeNode6.Name = "Nodo3";
+            treeNode6.Text = "Cordoba";
+            treeNode7.Name = "Nodo4";
+            treeNode7.Text = "Dolar";
+            treeNode8.Name = "Nodo1";
+            treeNode8.Text = "Efectivo";
+            treeNode9.Name = "Nodo2";
+            treeNode9.Text = "Credito";
+            treeNode10.Name = "Nodo0";
+            treeNode10.Text = "Venta";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            treeNode10});
             this.treeView1.Size = new System.Drawing.Size(121, 383);
             this.treeView1.TabIndex = 0;
             // 
@@ -92,12 +92,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(309, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 2;
+            this.txtNombre.Location = new System.Drawing.Point(309, 63);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 23);
+            this.txtNombre.TabIndex = 2;
             // 
             // label2
             // 
@@ -108,21 +108,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Cantidad";
             // 
-            // maskedTextBox1
+            // mtxtCantidad
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(309, 127);
-            this.maskedTextBox1.Mask = "00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox1.TabIndex = 4;
+            this.mtxtCantidad.Location = new System.Drawing.Point(309, 127);
+            this.mtxtCantidad.Mask = "00000";
+            this.mtxtCantidad.Name = "mtxtCantidad";
+            this.mtxtCantidad.Size = new System.Drawing.Size(100, 23);
+            this.mtxtCantidad.TabIndex = 4;
             // 
-            // maskedTextBox2
+            // mtxtPrecio
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(309, 188);
-            this.maskedTextBox2.Mask = "00000000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 23);
-            this.maskedTextBox2.TabIndex = 5;
+            this.mtxtPrecio.Location = new System.Drawing.Point(309, 188);
+            this.mtxtPrecio.Mask = "00000000";
+            this.mtxtPrecio.Name = "mtxtPrecio";
+            this.mtxtPrecio.Size = new System.Drawing.Size(100, 23);
+            this.mtxtPrecio.TabIndex = 5;
             // 
             // label3
             // 
@@ -249,15 +249,16 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Agregar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnPAgar
             // 
-            this.button3.Location = new System.Drawing.Point(458, 475);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Pagar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPAgar.Location = new System.Drawing.Point(458, 475);
+            this.btnPAgar.Name = "btnPAgar";
+            this.btnPAgar.Size = new System.Drawing.Size(75, 23);
+            this.btnPAgar.TabIndex = 18;
+            this.btnPAgar.Text = "Pagar";
+            this.btnPAgar.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -274,7 +275,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 648);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnPAgar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox4);
@@ -287,10 +288,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mtxtPrecio);
+            this.Controls.Add(this.mtxtCantidad);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.treeView1);
             this.Name = "frmCompra";
@@ -305,10 +306,10 @@
 
         private TreeView treeView1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtNombre;
         private Label label2;
-        private MaskedTextBox maskedTextBox1;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox mtxtCantidad;
+        private MaskedTextBox mtxtPrecio;
         private Label label3;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
@@ -325,7 +326,7 @@
         private TextBox textBox4;
         private Button button1;
         private Button button2;
-        private Button button3;
+        private Button btnPAgar;
         private Button button4;
     }
 }
